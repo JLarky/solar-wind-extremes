@@ -6,8 +6,11 @@ implicit real*8 (a-h, o-z)
 print *, 'sdfsdf'
 
 open(unit=1, file='omni_filtered.dat', form='formatted', access='sequential')
+open(unit=2, file='omni_new.dat')
 
-read (1, 100) IYEAR, IDAY, IHOUR, MIN, ID_IMF_spacecraft, ID_SW_spacecraft, n_points_IMF, n_points_Plasma,&
+ count = 0
+do
+read (1, 100, end=1) IYEAR, IDAY, IHOUR, MIN, ID_IMF_spacecraft, ID_SW_spacecraft, n_points_IMF, n_points_Plasma,&
      i_percent_of_interpolation, i_timeshift, iRMS_Timeshift, RMS_Min_var, iTime_btwn_observations,&
      Field_magnitude_average, BX_GSE, BY_GSE, BZ_GSE, BY_GSM, BZ_GSM, RMS_SD_B_scalar,&
      RMS_SD_field_vector, Speed, Vx_Velocity, Vy_Velocity, Vz_Velocity, Proton_Density,&
@@ -16,14 +19,28 @@ read (1, 100) IYEAR, IDAY, IHOUR, MIN, ID_IMF_spacecraft, ID_SW_spacecraft, n_po
      iAE_index, iAL_index, iAU_index, iSYM_D, iSYM_H, iASY_D, iASY_H, PCN_index,&
      Proton_flux_10_Mev, Proton_flux_30_Mev, Proton_flux_60_Mev
 
-print *, IYEAR, IDAY, IHOUR, MIN, ID_IMF_spacecraft, ID_SW_spacecraft, n_points_IMF, n_points_Plasma,&
-     i_percent_of_interpolation, i_timeshift, iRMS_Timeshift, RMS_Min_var, iTime_btwn_observations,&
-     Field_magnitude_average, BX_GSE, BY_GSE, BZ_GSE, BY_GSM, BZ_GSM, RMS_SD_B_scalar,&
-     RMS_SD_field_vector, Speed, Vx_Velocity, Vy_Velocity, Vz_Velocity, Proton_Density,&
-     Temperature, Flow_pressure, Electric_field, Plasma_beta, Alfven_mach_number,&
-     S_C_Xgse, S_C_Ygse, S_c_Zgse, BSN_location_Xgse, BSN_location_Ygse, BSN_location_Zgse,&
-     iAE_index, iAL_index, iAU_index, iSYM_D, iSYM_H, iASY_D, iASY_H, PCN_index,&
-     Proton_flux_10_Mev, Proton_flux_30_Mev, Proton_flux_60_Mev
+ count = count +1
+
+!print *, IYEAR, IDAY, IHOUR, MIN, ID_IMF_spacecraft, ID_SW_spacecraft, n_points_IMF, n_points_Plasma,&
+!     i_percent_of_interpolation, i_timeshift, iRMS_Timeshift, RMS_Min_var, iTime_btwn_observations,&
+!     Field_magnitude_average, BX_GSE, BY_GSE, BZ_GSE, BY_GSM, BZ_GSM, RMS_SD_B_scalar,&
+!     RMS_SD_field_vector, Speed, Vx_Velocity, Vy_Velocity, Vz_Velocity, Proton_Density,&
+!     Temperature, Flow_pressure, Electric_field, Plasma_beta, Alfven_mach_number,&
+!     S_C_Xgse, S_C_Ygse, S_c_Zgse, BSN_location_Xgse, BSN_location_Ygse, BSN_location_Zgse,&
+!     iAE_index, iAL_index, iAU_index, iSYM_D, iSYM_H, iASY_D, iASY_H, PCN_index,&
+!     Proton_flux_10_Mev, Proton_flux_30_Mev, Proton_flux_60_Mev
+
+write (2,*) Flow_pressure, Speed, Proton_Density, BZ_GSM, BY_GSM, Alfven_mach_number
+
+!if (count.gt.10) then
+!    goto 1
+!end if
+
+end do
+
+1 continue
+
+print *, 'end'
 
 end program
 
