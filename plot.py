@@ -15,7 +15,9 @@ from matplotlib.mlab import griddata
 
 print 'Starting...'
 # data = np.genfromtxt("omni_new.dat")
-data = np.genfromtxt("omni_truncated.dat")
+# data = np.genfromtxt("omni_truncated.dat")
+data = np.genfromtxt("omni_1h.dat")
+
 print 'Loaded.'
 
 
@@ -29,18 +31,18 @@ def plotone(row, file, title):
 	bins = np.linspace(min, max, num=200)
 
 	plt.subplot(2, 1, 1)
-	plt.hist(row, bins=bins, log=False, histtype='stepfilled')
+	plt.hist(row, bins=bins, log=False, histtype='bar')
 	plt.title(title)
 
 	plt.subplot(2, 1, 2)
-	plt.hist(row, bins=bins, log=True, histtype='stepfilled')
+	plt.hist(row, bins=bins, log=True, histtype='bar')
 
 	plt.savefig("out/"+file, dpi=100)
 	plt.clf()
 
-plotone(data[:,0], "pressure.png", "pressure, nP")
-plotone(data[:,1], "speed.png", "speed, km/s")
-plotone(data[:,2], "density.png", "proton density")
-plotone(data[:,3], "bz_gsm.png", "BZ_GSM")
-plotone(data[:,4], "by_gsm.png", "BY_GSM")
-plotone(data[:,5], "mach.png", "Mach_number")
+plotone(data[:,2], "pressure.png", "pressure, nP")
+plotone(data[:,3], "speed.png", "speed, km/s")
+plotone(data[:,4], "density.png", "proton density")
+plotone(data[:,5], "bz_gsm.png", "BZ_GSM")
+plotone(data[:,6], "by_gsm.png", "BY_GSM")
+plotone(data[:,7], "mach.png", "Mach_number")
