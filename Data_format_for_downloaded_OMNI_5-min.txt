@@ -1,0 +1,66 @@
+Listing for omni_5min data from 20100100 to 20101201
+
+
+Selected parameters:
+ 1 IYEAR
+ 2 IDAY
+ 3 IHOUR
+ 4 MIN
+ 5 ID for IMF spacecraft
+ 6 ID for SW Plasma spacecraft
+ 7 # of points in IMF averages
+ 8 # of points in Plasma averages
+ 9 Percent of Interpolation
+10 Timeshift
+11 RMS, Timeshift
+12 RMS Min_var
+13 Time btwn observations,sec
+14 Field magnitude average, nT
+15 BX, nT (GSE, GSM)
+16 BY, nT (GSE)
+17 BZ, nT (GSE)
+18 BY, nT (GSM)
+19 BZ, nT (GSM)
+20 RMS SD B scalar, nT
+21 RMS SD field vector, nT
+22 Speed, km/s
+23 Vx Velocity,km/s
+24 Vy Velocity, km/s
+25 Vz Velocity, km/s
+26 Proton Density, n/cc
+27 Temperature, K
+28 Flow pressure, nPa
+29 Electric field, mV/m
+30 Plasma beta
+31 Alfven mach number
+32 S/C, Xgse,Re
+33 S/C, Ygse,Re
+34 S/c, Zgse,Re
+35 BSN location, Xgse,Re
+36 BSN location, Ygse,Re
+37 BSN location, Zgse,Re
+38 AE-index, nT
+39 AL-index, nT
+40 AU-index, nT
+41 SYM/D, nT
+42 SYM/H, nT
+43 ASY/D, nT
+44 ASY/H, nT
+45 PCN-index
+46 Proton flux (>10 Mev)
+47 Proton flux (>30 Mev)
+48 Proton flux (>60 Mev)
+
+
+FORTRAN format:
+                                               bxgse         bygsm bzgsm
+(I4 I4 I3 I3 I3 I3 I4 I4 I4 I7 I7 F6.2 I7 F8.2 F8.2 F8.2 F8.2 F8.2 F8.2  F8.2  F8.2
+ v    vx   vy   vz   Np   T
+F8.1 F8.1 F8.1 F8.1 F7.2 F9.0 F6.2 F7.2 F7.2 F6.1 F8.2 F8.2 F8.2 F8.2 F8.2 F8.2
+           symH
+I6 I6 I6 I6 I6 I6 I6 F7.2 F9.2 F9.2 F9.2)
+
+OR
+
+(2I4,4I3,3I4,2I7,F6.2,I7,8F8.2,4F8.1,F7.2,F9.0,F6.2,2F7.2,F6.1,6F8.2,7I6,F7.2,3F9.2)
+
