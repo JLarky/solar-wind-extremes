@@ -21,19 +21,29 @@ print 'Loaded.'
 
 def plotone(row, file, title):
 	print title
+	row = np.sort(row)
+	size = np.size(row)
+	d = size/100
+	print size, d, row[d], row[size-d], row
 	min = np.min(row)
 	max = np.max(row)
 
 	num = 20
 
 	bins = np.linspace(min, max, num=200)
+	hi, _ = np.histogram(row, bins=bins)
+	m = np.max(hi)
+	a=[[row[d],m],[row[d],.1],[row[size-d],.1],[row[size-d],m]]
 
 	plt.subplot(2, 1, 1)
 	plt.hist(row, bins=bins, log=False, histtype='bar')
+	plt.plot(*zip(*a))
 	plt.title(title)
 
 	plt.subplot(2, 1, 2)
 	plt.hist(row, bins=bins, log=True, histtype='bar')
+	plt.plot(*zip(*a))
+	plt.title("Extreme (1%%): %.2f, %.2f" % (row[d], row[size-d]) )
 
 	plt.savefig("../out/"+file, dpi=100)
 	plt.clf()
@@ -41,6 +51,6 @@ def plotone(row, file, title):
 plotone(data[:,2], "pressure.png", "pressure, nP")
 plotone(data[:,3], "speed.png", "speed, km/s")
 plotone(data[:,4], "density.png", "proton density")
-plotone(data[:,5], "bz_gsm.png", "BZ_GSM")
-plotone(data[:,6], "by_gsm.png", "BY_GSM")
-plotone(data[:,7], "mach.png", "Mach_number")
+plotone(data[:,5], "bz_gsm.png", "BZ_GSM, nT")
+plotone(data[:,6], "by_gsm.png", "BY_GSM, nT")
+plotone(data[:,7], "sym_h.png", "SYM-H, nT")
