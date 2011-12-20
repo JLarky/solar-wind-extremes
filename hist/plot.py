@@ -14,7 +14,7 @@ from numpy.random import uniform, seed
 from matplotlib.mlab import griddata
 
 print 'Starting...'
-data = np.genfromtxt("../data/omni_1h.dat")
+data = np.genfromtxt("../data2/omni_1h.dat")
 
 print 'Loaded.'
 
