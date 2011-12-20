@@ -35,7 +35,7 @@ def plotone(row, file, title):
 	plt.subplot(2, 1, 2)
 	plt.hist(row, bins=bins, log=True, histtype='stepfilled')
 
-	plt.savefig(file, dpi=100)
+	plt.savefig("out/"+file, dpi=100)
 	plt.clf()
 
 plotone(data[:,0], "pressure.png", "pressure, nP")

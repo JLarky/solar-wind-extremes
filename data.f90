@@ -32,6 +32,8 @@ read (1, 100, end=1) IYEAR, IDAY, IHOUR, MIN, ID_IMF_spacecraft, ID_SW_spacecraf
 
 write (2,*) Flow_pressure, Speed, Proton_Density, BZ_GSM, BY_GSM, Alfven_mach_number
 
+print *, IYEAR, IDAY, IHOUR
+
 !if (count.gt.10) then
 !    goto 1
 !end if
