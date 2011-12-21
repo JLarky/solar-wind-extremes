@@ -52,6 +52,12 @@ def plotall(data, suffix, fraction):
 	plotone(data[:,5], "bz_gsm"+	suffix+".png", "BZ_GSM, nT",	fraction)
 	plotone(data[:,6], "by_gsm"+	suffix+".png", "BY_GSM, nT",	fraction)
 	plotone(data[:,7], "sym_h"+	suffix+".png", "SYM-H, nT",	fraction)
+	plotone(data[:,8], "W1_"+	suffix+".png", "W1",		fraction)
+	plotone(data[:,9], "W2_"+	suffix+".png", "W2",		fraction)
+	plotone(data[:,10],"W3_"+	suffix+".png", "W3",		fraction)
+	plotone(data[:,11],"W4_"+	suffix+".png", "W4",		fraction)
+	plotone(data[:,12],"W5_"+	suffix+".png", "W5",		fraction)
+	plotone(data[:,13],"W6_"+	suffix+".png", "W6",		fraction)
 
 data = np.genfromtxt("../data2/omni_1h.dat")
 plotall(data, "", 100)

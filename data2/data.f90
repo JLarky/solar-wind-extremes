@@ -1,13 +1,12 @@
 program test
 
 implicit real*8 (a-h, o-z)
-real*8 :: avg(6)
+real*8 :: avg(12)
 
 100 format(I4,I4,I3,I3,F8.2,F8.2,F8.2,F8.1,F8.1,F8.1,F7.2,F9.0,F7.1,3X,I2,3X,I2,F8.4,F7.2,F7.2,F7.2,F7.2,F7.2,F7.2,F7.2)
 print *, 'start'
 
 open(unit=1, file='omni_ts05.dat', form='formatted', access='sequential')
-open(unit=2, file='omni_new.dat')
 open(unit=3, file='omni_1h.dat')
 
 
@@ -38,6 +37,12 @@ if (ih_old.eq.ih) then
     avg(4) = avg(4)+BZGSM
     avg(5) = avg(5)+BYGSM
     avg(6) = avg(6)+SYMH
+    avg(7) = W1 ! last win
+    avg(8) = W2 ! last win
+    avg(9) = W3 ! last win
+    avg(10)= W4 ! last win
+    avg(11)= W5 ! last win
+    avg(12)= W6 ! last win
 else
     ! new hour
     if (num.ne.0) then
@@ -50,8 +55,6 @@ else
     avg = 0.
     num = 0
 end if
-
-write (2,*) Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH
 
 end do
 

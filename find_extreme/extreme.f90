@@ -3,7 +3,6 @@ program test
 implicit real*8 (a-h, o-z)
 real*8 :: avg(6)
 
-100 format(I4,I4,I3,I3,F8.2,F8.2,F8.2,F8.1,F8.1,F8.1,F7.2,F9.0,F7.1,3X,I2,3X,I2,F8.4,F7.2,F7.2,F7.2,F7.2,F7.2,F7.2,F7.2)
 print *, 'start'
 
 open(unit=1, file='../data2/omni_1h.dat', form='formatted', access='sequential')
@@ -16,7 +15,7 @@ open(unit=2, file='data.dat')
  num = 0
 
 do
-read (1, *, end=1) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH
+read (1, *, end=1) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 
  count = count +1
 
@@ -31,7 +30,7 @@ read (1, *, end=1) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH
 !if (Speed.le.280.19) then
 if (Speed.ge.723.47) then
     print *, ih !, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH
-    write (2, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH
+    write (2, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 end if
 
 end do
