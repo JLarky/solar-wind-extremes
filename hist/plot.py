@@ -14,17 +14,13 @@ from numpy.random import uniform, seed
 from matplotlib.mlab import griddata
 
 print 'Starting...'
-data = np.genfromtxt("../data2/omni_1h.dat")
 
-print 'Loaded.'
-
-
-def plotone(row, file, title):
+def plotone(row, file, title, fraction):
 	print title
 	row = np.sort(row)
 	size = np.size(row)
-	d = size/100
-	print size, d, row[d], row[size-d], row
+	d = size/fraction
+	# print size, d, row[d], row[size-d], row
 	min = np.min(row)
 	max = np.max(row)
 
@@ -48,9 +44,16 @@ def plotone(row, file, title):
 	plt.savefig("../out/"+file, dpi=100)
 	plt.clf()
 
-plotone(data[:,2], "pressure.png", "pressure, nP")
-plotone(data[:,3], "speed.png", "speed, km/s")
-plotone(data[:,4], "density.png", "proton density")
-plotone(data[:,5], "bz_gsm.png", "BZ_GSM, nT")
-plotone(data[:,6], "by_gsm.png", "BY_GSM, nT")
-plotone(data[:,7], "sym_h.png", "SYM-H, nT")
+def plotall(data, suffix, fraction):
+	print 'Loaded.'
+	plotone(data[:,2], "pressure"+	suffix+".png", "pressure, nP",	fraction)
+	plotone(data[:,3], "speed"+	suffix+".png", "speed, km/s",	fraction)
+	plotone(data[:,4], "density"+	suffix+".png", "proton density",fraction)
+	plotone(data[:,5], "bz_gsm"+	suffix+".png", "BZ_GSM, nT",	fraction)
+	plotone(data[:,6], "by_gsm"+	suffix+".png", "BY_GSM, nT",	fraction)
+	plotone(data[:,7], "sym_h"+	suffix+".png", "SYM-H, nT",	fraction)
+
+data = np.genfromtxt("../data2/omni_1h.dat")
+plotall(data, "", 100)
+data = np.genfromtxt("../find_extreme/data.dat")
+plotall(data, "2", 2)
