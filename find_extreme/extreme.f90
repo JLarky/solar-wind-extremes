@@ -19,7 +19,7 @@ read (1, *, end=1) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4
 
  count = count +1
 
-!if (Pdyn.le.0.45) then
+if (Pdyn.le.0.45) then
 !if (Pdyn.ge.8.55) then
 !if (SYMH.le.-79.25) then
 !if (SYMH.ge.19.38) then
@@ -28,7 +28,7 @@ read (1, *, end=1) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4
 !if (BZGSM.le.-8.43) then
 !if (BZGSM.ge.8.68) then
 !if (Speed.le.280.19) then
-if (Speed.ge.723.47) then
+!if (Speed.ge.723.47) then
     print *, ih !, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH
     write (2, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 end if
