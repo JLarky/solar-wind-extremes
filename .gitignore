@@ -1,6 +1,8 @@
 *.o
 *.dat
 *~
+*sublime*
 data/data
 data2/data
 find_extreme/extreme
+/plot/plot
