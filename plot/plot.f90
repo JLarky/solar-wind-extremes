@@ -47,6 +47,7 @@ end program
 
       lin_out= 'lines.dat'
       num_out='numpnt.dat'
+      open(unit=2,file="inputfile.dat")
       open(unit=3,file=o_file) ! linesg.dat
 
        print *, '    enter tilt angle (degrees)'
@@ -62,6 +63,8 @@ end program
 	parmod(2) = -10. ! dst
 	parmod(3) =   2. ! By
 	parmod(4) =   -2. ! Bz
+
+	read (2, *) parmod
 
 	if (.false.) then
 	do
