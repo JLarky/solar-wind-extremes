@@ -38,7 +38,7 @@ for i in files:
 	subprocess.check_call(command)
 	command = ('make', 'show')
 	subprocess.check_call(command)
-	command = ('cp', 'lines.ps', i+"/")
+	command = ('cp', 'lines.png', i+"/")
 	subprocess.check_call(command)
 
 
