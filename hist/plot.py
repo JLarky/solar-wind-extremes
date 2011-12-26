@@ -39,19 +39,19 @@ def plotone(row, file, title, fraction):
 	plt.subplot(2, 1, 2)
 	plt.hist(row, bins=bins, log=True, histtype='bar')
 	plt.plot(*zip(*a))
-	plt.title("Extreme (1%%): %.2f, %.2f" % (row[d], row[size-d]) )
+	plt.title("Extreme (%.1f%%): %.2f, %.2f" % (100.0/fraction, row[d], row[size-d]) )
 
 	plt.savefig("../out/"+file, dpi=100)
 	plt.clf()
 
 def plotall(data, suffix, fraction):
 	print 'Loaded.'
-	# plotone(data[:,2], "pressure"+	suffix+".png", "pressure, nP",	fraction)
-	# plotone(data[:,3], "speed"+	suffix+".png", "speed, km/s",	fraction)
-	# plotone(data[:,4], "density"+	suffix+".png", "proton density",fraction)
-	# plotone(data[:,5], "bz_gsm"+	suffix+".png", "BZ_GSM, nT",	fraction)
-	# plotone(data[:,6], "by_gsm"+	suffix+".png", "BY_GSM, nT",	fraction)
-	# plotone(data[:,7], "sym_h"+	suffix+".png", "SYM-H, nT",	fraction)
+	plotone(data[:,2], "pressure"+	suffix+".png", "pressure, nP",	fraction)
+	plotone(data[:,3], "speed"+	suffix+".png", "speed, km/s",	fraction)
+	plotone(data[:,4], "density"+	suffix+".png", "proton density",fraction)
+	plotone(data[:,5], "bz_gsm"+	suffix+".png", "BZ_GSM, nT",	fraction)
+	plotone(data[:,6], "by_gsm"+	suffix+".png", "BY_GSM, nT",	fraction)
+	plotone(data[:,7], "sym_h"+	suffix+".png", "SYM-H, nT",	fraction)
 	plotone(data[:,8], "W1_"+	suffix+".png", "W1",		fraction)
 	plotone(data[:,9], "W2_"+	suffix+".png", "W2",		fraction)
 	plotone(data[:,10],"W3_"+	suffix+".png", "W3",		fraction)
@@ -59,7 +59,7 @@ def plotall(data, suffix, fraction):
 	plotone(data[:,12],"W5_"+	suffix+".png", "W5",		fraction)
 	plotone(data[:,13],"W6_"+	suffix+".png", "W6",		fraction)
 
-# data = np.genfromtxt("../data2/omni_1h.dat")
-# plotall(data, "", 100)
-data = np.genfromtxt("../find_extreme/data.dat")
+data = np.genfromtxt("../data2/omni_1h.dat")
+plotall(data, "", 1000)
+data = np.genfromtxt("../find_extreme/data_pdyn_hight.dat")
 plotall(data, "2", 2)

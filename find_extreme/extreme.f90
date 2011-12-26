@@ -28,35 +28,60 @@ read (1, *, end=1) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4
 
  count = count +1
 
-if (Pdyn.le.0.45) then
+! 1 %
+Pdyn_min = 0.45
+Pdyn_max = 8.55
+SYMH_min = -79.25
+SYMH_max = 19.38
+BYGSM_min = -9.57
+BYGSM_max = 9.95
+BZGSM_min = -8.43
+BZGSM_max = 8.68
+Speed_min = 280.19
+Speed_max = 723.47
+
+! 0.1 %
+Pdyn_min = 0.13
+Pdyn_max = 18.69
+SYMH_min = -167.60
+SYMH_max = 36.95
+BYGSM_min = -16.51
+BYGSM_max = 18.94
+BZGSM_min = -16.78
+BZGSM_max = 16.99
+Speed_min = 258.45
+Speed_max = 811.27
+
+
+if (Pdyn.le.Pdyn_min) then
     print *, ih !, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH
     write (2, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 end if
-if (Pdyn.ge.8.55) then
+if (Pdyn.ge.Pdyn_max) then
     write (3, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 end if
-if (SYMH.le.-79.25) then
+if (SYMH.le.SYMH_min) then
     write (4, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 end if
-if (SYMH.ge.19.38) then
+if (SYMH.ge.SYMH_max) then
     write (5, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 end if
-if (BYGSM.le.-9.57) then
+if (BYGSM.le.BYGSM_min) then
     write (6, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 end if
-if (BYGSM.ge.9.95) then
+if (BYGSM.ge.BYGSM_max) then
     write (7, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 end if
-if (BZGSM.le.-8.43) then
+if (BZGSM.le.BZGSM_min) then
     write (8, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 end if
-if (BZGSM.ge.8.68) then
+if (BZGSM.ge.BZGSM_max) then
     write (9, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 end if
-if (Speed.le.280.19) then
+if (Speed.le.Speed_min) then
     write (10, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 end if
-if (Speed.ge.723.47) then
+if (Speed.ge.Speed_max) then
     write (11, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 end if
 
