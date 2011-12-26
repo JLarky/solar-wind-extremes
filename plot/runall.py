@@ -40,5 +40,7 @@ for i in files:
 	subprocess.check_call(command)
 	command = ('cp', 'lines.png', i+"/")
 	subprocess.check_call(command)
+	command = ('taadaa')
+	subprocess.check_call(command)
 
 

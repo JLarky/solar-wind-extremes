@@ -7,8 +7,13 @@ program prog
 	external t04_s
 
 	print *, 'Start'
+        open(unit=2,file="inputfile.dat")
+	read (2, *) parmod
+	close(2)
 
-	call plot_trace(t04_s, "linesg.dat")
+	call plot_trace(parmod, t04_s, "linesg.dat")
+
+	call find_points(parmod, t04_s, "points.dat")
 
 	stop
 
@@ -26,7 +31,87 @@ program prog
 end program
 
 
-      subroutine plot_trace(modfun,o_file)
+subroutine find_points(parmod, modfun,o_file)
+    implicit none
+    character         o_file*(*)
+    external modfun, dip_08
+    real*8 :: parmod(10)
+    real*8 :: ps,x,y,z,bx,by,bz,bzz
+
+    real*8 :: xf,yf,zf,xx(5000),yy(5000),zz(5000),r
+    integer :: i,lp
+
+
+    open(unit=3,file=o_file) ! points.dat
+
+    x = 0.0
+    y = 0.0
+    z = 0.0
+    ps = 0.0
+    do
+        z = z + 0.01
+        call modfun (1,parmod,ps,x,y,z,bx,by,bz)
+        if (bx.eq.0.) then; exit; end if
+    end do
+    !write (3, *) x, y, z
+
+    do
+        z = z - 0.005
+        call trace_08 (x,y,z,-1.d0,1.0d0,1.d-5,50.0d0,1.d0,1,parmod,&
+                       modfun, dip_08,xf,yf,zf,xx,yy,zz,lp,5000)
+        r = sqrt(xf**2+yf**2+zf**2)
+        !print *, x,y,z,xf,yf,zf
+        if ((r.lt.2.)) then; exit; end if
+    end do
+    write (3, *) x, y, z
+    write (3, *) x, y, -z
+    write (3, *) xf, yf, zf
+
+    z = 0.
+    x = 5.
+    do
+        x = x + 0.05
+        call modfun (1,parmod,ps,x,y,z,bx,by,bz)
+        bzz = by
+        call modfun (1,parmod,ps,x,y,z+.1,bx,by,bz)
+        if ((by.eq.bzz)) then; exit; end if
+    end do
+
+    do
+        x = x - 0.01
+        call trace_08 (x,y,z,-1.d0,1.0d0,1.d-5,50.0d0,1.d0,1,parmod,&
+                       modfun, dip_08,xf,yf,zf,xx,yy,zz,lp,5000)
+        r = sqrt(xf**2+yf**2+zf**2)
+        !print *, x,y,z,xf,yf,zf
+        if ((r.lt.2.)) then; exit; end if
+    end do
+    write (3, *) x, y, z
+    write (3, *) xf, yf, zf
+    print *, "ok", parmod
+
+    x = -5.5
+    do
+        x = x - 0.25
+        call trace_08 (x,y,z,-1.d0,1.0d0,1.d-5,50.0d0,1.d0,1,parmod,&
+                       modfun, dip_08,xf,yf,zf,xx,yy,zz,lp,5000)
+        r = sqrt(xf**2+yf**2+zf**2)
+        if ((r.gt.2.)) then; exit; end if
+    end do
+
+    do
+        x = x + 0.01
+        call trace_08 (x,y,z,-1.d0,1.0d0,1.d-5,50.0d0,1.d0,1,parmod,&
+                       modfun, dip_08,xf,yf,zf,xx,yy,zz,lp,5000)
+        r = sqrt(xf**2+yf**2+zf**2)
+        if ((r.lt.2.)) then; exit; end if
+    end do
+    write (3, *) xf, yf, zf
+    write (3, *) x, y, z
+
+    close(3)
+end subroutine
+
+      subroutine plot_trace(parmod,modfun,o_file)
       implicit real * 8 (a - h, o - z)
       character         o_file*(*)
       external modfun
@@ -47,7 +132,6 @@ end program
 
       lin_out= 'lines.dat'
       num_out='numpnt.dat'
-      open(unit=2,file="inputfile.dat")
       open(unit=3,file=o_file) ! linesg.dat
 
        print *, '    enter tilt angle (degrees)'
@@ -58,13 +142,6 @@ end program
 	cps=dcos(ps)
 
 	x=1.0;y=2.0;z=3.0;
-	parmod = 0.
-	parmod(1) = 2. ! p_dyn
-	parmod(2) = -10. ! dst
-	parmod(3) =   2. ! By
-	parmod(4) =   -2. ! Bz
-
-	read (2, *) parmod
 
 	if (.false.) then
 	do
