@@ -48,25 +48,26 @@ subroutine find_points(parmod, modfun,o_file)
     y = 0.0
     z = 0.0
     ps = 0.0
+
+    ! Magnetosphere size at x = 0
     do
         z = z + 0.01
         call modfun (1,parmod,ps,x,y,z,bx,by,bz)
         if (bx.eq.0.) then; exit; end if
     end do
-    !write (3, *) x, y, z
 
     do
         z = z - 0.005
         call trace_08 (x,y,z,-1.d0,1.0d0,1.d-5,50.0d0,1.d0,1,parmod,&
                        modfun, dip_08,xf,yf,zf,xx,yy,zz,lp,5000)
         r = sqrt(xf**2+yf**2+zf**2)
-        !print *, x,y,z,xf,yf,zf
         if ((r.lt.2.)) then; exit; end if
     end do
     write (3, *) x, y, z
     write (3, *) x, y, -z
     write (3, *) xf, yf, zf
 
+    ! Magnetosphere sun point
     z = 0.
     x = 5.
     do
@@ -82,13 +83,13 @@ subroutine find_points(parmod, modfun,o_file)
         call trace_08 (x,y,z,-1.d0,1.0d0,1.d-5,50.0d0,1.d0,1,parmod,&
                        modfun, dip_08,xf,yf,zf,xx,yy,zz,lp,5000)
         r = sqrt(xf**2+yf**2+zf**2)
-        !print *, x,y,z,xf,yf,zf
         if ((r.lt.2.)) then; exit; end if
     end do
     write (3, *) x, y, z
     write (3, *) xf, yf, zf
     print *, "ok", parmod
 
+    ! Last closed line at night side
     x = -5.5
     do
         x = x - 0.25
@@ -105,6 +106,18 @@ subroutine find_points(parmod, modfun,o_file)
         r = sqrt(xf**2+yf**2+zf**2)
         if ((r.lt.2.)) then; exit; end if
     end do
+    write (3, *) xf, yf, zf
+    write (3, *) x, y, z
+
+    ! Geostational
+    x = -6.611
+        call trace_08 (x,y,z,-1.d0,1.0d0,1.d-5,50.0d0,1.d0,1,parmod,&
+                       modfun, dip_08,xf,yf,zf,xx,yy,zz,lp,5000)
+    write (3, *) xf, yf, zf
+    write (3, *) x, y, z
+    x = 6.611
+        call trace_08 (x,y,z,-1.d0,1.0d0,1.d-5,50.0d0,1.d0,1,parmod,&
+                       modfun, dip_08,xf,yf,zf,xx,yy,zz,lp,5000)
     write (3, *) xf, yf, zf
     write (3, *) x, y, z
 

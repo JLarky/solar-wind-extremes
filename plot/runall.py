@@ -18,18 +18,18 @@ files = ["pdyn_low",
 for i in files:
 	print "hello data_"+i+".dat"
 	data = np.genfromtxt("../find_extreme/data_"+i+".dat")
-	pdyn	= data[1,2]
-	speed	= data[1,3]
-	den	= data[1,4]
-	bzgsm	= data[1,5]
-	bygsm	= data[1,6]
-	symh	= data[1,7]
-	w1	= data[1,8]
-	w2	= data[1,9]
-	w3	= data[1,10]
-	w4	= data[1,11]
-	w5	= data[1,12]
-	w6	= data[1,13]
+	pdyn	= np.average(data[:,2])
+	speed	= np.average(data[:,3])
+	den	= np.average(data[:,4])
+	bzgsm	= np.average(data[:,5])
+	bygsm	= np.average(data[:,6])
+	symh	= np.average(data[:,7])
+	w1	= np.average(data[:,8])
+	w2	= np.average(data[:,9])
+	w3	= np.average(data[:,10])
+	w4	= np.average(data[:,11])
+	w5	= np.average(data[:,12])
+	w6	= np.average(data[:,13])
 	print pdyn, symh, bygsm, bzgsm, w1, w2, w3, w4, w5, w6
 	file = open("inputfile.dat", "w")
 	file.write("%f %f %f %f %f %f %f %f %f %f\n" % (pdyn, symh, bygsm, bzgsm, w1, w2, w3, w4, w5, w6))
@@ -38,7 +38,7 @@ for i in files:
 	subprocess.check_call(command)
 	command = ('make', 'show')
 	subprocess.check_call(command)
-	command = ('cp', 'lines.png', i+"/")
+	command = ('cp', 'lines.png', 'inputfile.dat', 'points.dat', i+"/")
 	subprocess.check_call(command)
 	command = ('taadaa')
 	subprocess.check_call(command)
