@@ -1,5 +1,9 @@
 *.o
-*.dat
+/*.dat
+/data*/*dat
+/find_extreme/*.dat
+/hist/*.dat
+/plot/*.dat
 *~
 *sublime*
 data/data
