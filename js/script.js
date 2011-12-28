@@ -23,10 +23,10 @@ jQuery(document).ready(function($) {
 	});
 
 	$(".meta-gallery nav a").click(function() {
-		$(".meta-gallery .gallery, .meta-gallery h3").addClass('only-print');
+		$(".meta-gallery .gallery, .meta-gallery h3[id]").addClass('only-print');
 		var $this = $(this);
 		var id = $this.attr('href');
-		$(id).next().removeClass('only-print')
+		$(id).next().removeClass('only-print');
 		$this.parent().parent().find("a").removeClass('active');
 		$this.addClass('active');
 		return false;
