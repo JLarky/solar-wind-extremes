@@ -327,20 +327,34 @@ ul {
 /* gallary */
 
 .gallery li.small img {
-  height: 100px; /*height: 60px;*/
+  height: auto; /*height: 60px;*/
   width: 130px; /*width: 80px;*/
+  cursor: pointer;
 }
 
 .gallery li.small .info {
   display: none;
 }
 
+.gallery.working ul {
+  width: 804px;
+}
+
 .gallery.working ul li {
   float: left;
+  padding-bottom: 1px;
+  padding-right: 4px;
 }
 
 @media print {
   .gallery .panel {
     display: none;
   }
+  .gallery li.small img {
+    width: 50%;
+  }
+  .gallery li.small .info {
+    display: block;
+  }
+  .break { page-break-before: always; }
 }
