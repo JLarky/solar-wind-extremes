@@ -4,7 +4,7 @@ run: plot
 	./plot && sha1sum *.dat > files.sha1
 
 show:
-	./gnu.plot
+	./gnu.plot && convert lines.ps lines.png && rm lines.ps
 
 plot: plot.o ts04c.o geopack.o
 	f90 plot.o ts04c.o geopack.o -o $@
