@@ -35,15 +35,20 @@ def plotone(row, file, title, fraction):
 
 	plt.subplot(2, 1, 1)
 	plt.hist(row, bins=bins, log=False, histtype='bar')
+	plt.xlabel('value')
+	plt.ylabel('counts')
 	if fraction:
 		plt.plot(*zip(*a))
 	plt.title(title)
 
 	plt.subplot(2, 1, 2)
 	plt.hist(row, bins=bins, log=True, histtype='bar')
+	plt.ylabel('counts, logscale')
 	if fraction:
 		plt.plot(*zip(*a))
-		plt.title("Extreme (%.1f%%): %.2f, %.2f" % (100.0/fraction, row[d], row[size-d]) )
+		plt.xlabel("extreme values (%.1f%%): %.2f, %.2f" % (100.0/fraction, row[d], row[size-d]) )
+	else:
+		plt.xlabel('value')
 
 	dir = os.path.dirname("../out/"+file+".png")
 	if not os.path.exists(dir):

@@ -1,3 +1,4 @@
+.directory
 *.o
 /*.dat
 /data*/*dat
