@@ -358,3 +358,34 @@ html {
   }
   .break { page-break-before: always; }
 }
+
+
+/* metagallery */
+.only-print {
+  display: none;
+}
+
+@media print {
+  .no-print {
+    display: none;
+  }
+  .only-print {
+    display: block;
+  }
+}
+
+.meta-gallery nav {
+  margin-bottom: 5px;
+}
+.meta-gallery nav a {
+  padding: 0;
+  margin: 0 7px 3px 0px;
+  border-bottom: 1px dashed #815B08;;
+}
+.meta-gallery nav h4 {
+  padding: 0;
+  margin: 0;
+}
+.meta-gallery nav a.active {
+  border-bottom: 1px solid #815B08;;
+}

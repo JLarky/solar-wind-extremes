@@ -20,7 +20,18 @@ jQuery(document).ready(function($) {
 
 			$this.find("li:first img").click();
 		}
-	})
+	});
+
+	$(".meta-gallery nav a").click(function() {
+		$(".meta-gallery .gallery, .meta-gallery h3").addClass('only-print');
+		var $this = $(this);
+		var id = $this.attr('href');
+		$(id).next().removeClass('only-print')
+		$this.parent().parent().find("a").removeClass('active');
+		$this.addClass('active');
+		return false;
+	}).first().click()
+
 });
 
 

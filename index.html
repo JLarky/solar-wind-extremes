@@ -164,12 +164,559 @@
 		<li>&#968; (Psi) задавалась равным 0 градусов, что соответствует весеннему или осеннему равноденствию.</li>
 		<li>Вместо значений индекса Dst подставлялись значения индекса SYM-H.</li>
 		<li>Используя анализ данных из предыдущей главы определялись экстремальные значения параметров
-		и из полного набора данных создавались наборы измерений при которых значения были больше максимального и меньше минимального. Другими словами выбрав, например, в качестве минимального значения динамического давления 0.13 nPa мы отбирали реальные данные солнечного ветра (все параметры, включая индексы W1-W6), когда давление было равно или ниже, чем это значение).
+		и из полного набора данных создавались наборы измерений при которых значения были больше максимального и меньше минимального. Другими словами выбрав, например, в качестве минимального значения динамического давления 0.12 nPa мы отбирали реальные данные солнечного ветра (все параметры, включая индексы W1-W6), когда давление было равно или ниже, чем это значение).
 		</li>
 		<li>Теперь усреднив данные наборы параметров мы получаем "среднюю" модель при, например, экстремально низких давлениях, или экстремально высоких значениях скорости солнечного ветра.</li>
 		</ul>
 		</p>
+	</section>
+	<section class="content">
+		<h2 class="break">Параметры солнечного ветра при экстремальных условиях</h2>
 
+		<div class="meta-gallery">
+		<nav class="no-print">
+		<h4><a href="#pdyn_low">Низкие значения динамического давления</a></h4>
+		<h4><a href="#pdyn_high">Высокие значения динамического давления</a></h4>
+		<h4><a href="#symh_low">Низкие значения индекса SYM-H</a></h4>
+		<h4><a href="#symh_high">Высокие значения индекса SYM-H</a></h4>
+		<h4><a href="#bygsm_low">Низкие значения By-компоненты межпланетного магнитного поля</a></h4>
+		<h4><a href="#bygsm_high">Высокие значения By-компоненты межпланетного магнитного поля</a></h4>
+		<h4><a href="#bzgsm_low">Низкие значения Bz-компоненты межпланетного магнитного поля</a></h4>
+		<h4><a href="#bzgsm_high">Высокие значения Bz-компоненты межпланетного магнитного поля</a></h4>
+		<h4><a href="#speed_low">Низкие значения скорости солнечного ветра</a></h4>
+		<h4><a href="#speed_high">Высокие значения скорости солнечного ветра</a></h4>
+		</nav>
+		<h3 id="pdyn_low">Низкие значения динамического давления</h3>
+		<div class="gallery clearfix">
+		<ul>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_low/bz_gsm.png" alt="Распределение значений Bz компоненты межпланетного поля"/>
+			<div class="info">Распределение значений Bz компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_low/sym_h.png" alt="Распределение значений индекса SYM-H"/>
+			<div class="info">Распределение значений индекса SYM-H</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_low/pressure.png" alt="Распределение значений давления плазмы"/>
+			<div class="info">Распределение значений давления плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_low/speed.png" alt="Распределение значений скорости солнечного ветра"/>
+			<div class="info">Распределение значений скорости солнечного ветра</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_low/by_gsm.png" alt="Распределение значений By компоненты межпланетного поля"/>
+			<div class="info">Распределение значений By компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_low/density.png" alt="Распределение значений плотности плазмы"/>
+			<div class="info">Распределение значений плотности плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_low/W1.png" alt="Распределение значений параметра W1 модели TS05"/>
+			<div class="info">Распределение значений параметра W1 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_low/W2.png" alt="Распределение значений параметра W2 модели TS05"/>
+			<div class="info">Распределение значений параметра W2 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_low/W3.png" alt="Распределение значений параметра W3 модели TS05"/>
+			<div class="info">Распределение значений параметра W3 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_low/W4.png" alt="Распределение значений параметра W4 модели TS05"/>
+			<div class="info">Распределение значений параметра W4 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_low/W5.png" alt="Распределение значений параметра W5 модели TS05"/>
+			<div class="info">Распределение значений параметра W5 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_low/W6.png" alt="Распределение значений параметра W6 модели TS05"/>
+			<div class="info">Распределение значений параметра W6 модели TS05</div>
+		</li>
+		</ul>
+		</div>
+		<h3 id="pdyn_high">Высокие значения динамического давления</h3>
+		<div class="gallery clearfix">
+		<ul>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_high/bz_gsm.png" alt="Распределение значений Bz компоненты межпланетного поля"/>
+			<div class="info">Распределение значений Bz компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_high/sym_h.png" alt="Распределение значений индекса SYM-H"/>
+			<div class="info">Распределение значений индекса SYM-H</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_high/pressure.png" alt="Распределение значений давления плазмы"/>
+			<div class="info">Распределение значений давления плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_high/speed.png" alt="Распределение значений скорости солнечного ветра"/>
+			<div class="info">Распределение значений скорости солнечного ветра</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_high/by_gsm.png" alt="Распределение значений By компоненты межпланетного поля"/>
+			<div class="info">Распределение значений By компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_high/density.png" alt="Распределение значений плотности плазмы"/>
+			<div class="info">Распределение значений плотности плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_high/W1.png" alt="Распределение значений параметра W1 модели TS05"/>
+			<div class="info">Распределение значений параметра W1 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_high/W2.png" alt="Распределение значений параметра W2 модели TS05"/>
+			<div class="info">Распределение значений параметра W2 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_high/W3.png" alt="Распределение значений параметра W3 модели TS05"/>
+			<div class="info">Распределение значений параметра W3 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_high/W4.png" alt="Распределение значений параметра W4 модели TS05"/>
+			<div class="info">Распределение значений параметра W4 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_high/W5.png" alt="Распределение значений параметра W5 модели TS05"/>
+			<div class="info">Распределение значений параметра W5 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/pdyn_high/W6.png" alt="Распределение значений параметра W6 модели TS05"/>
+			<div class="info">Распределение значений параметра W6 модели TS05</div>
+		</li>
+		</ul>
+		</div>
+		<h3 id="symh_low">Низкие значения индекса SYM-H</h3>
+		<div class="gallery clearfix">
+		<ul>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_low/bz_gsm.png" alt="Распределение значений Bz компоненты межпланетного поля"/>
+			<div class="info">Распределение значений Bz компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_low/sym_h.png" alt="Распределение значений индекса SYM-H"/>
+			<div class="info">Распределение значений индекса SYM-H</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_low/pressure.png" alt="Распределение значений давления плазмы"/>
+			<div class="info">Распределение значений давления плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_low/speed.png" alt="Распределение значений скорости солнечного ветра"/>
+			<div class="info">Распределение значений скорости солнечного ветра</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_low/by_gsm.png" alt="Распределение значений By компоненты межпланетного поля"/>
+			<div class="info">Распределение значений By компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_low/density.png" alt="Распределение значений плотности плазмы"/>
+			<div class="info">Распределение значений плотности плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_low/W1.png" alt="Распределение значений параметра W1 модели TS05"/>
+			<div class="info">Распределение значений параметра W1 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_low/W2.png" alt="Распределение значений параметра W2 модели TS05"/>
+			<div class="info">Распределение значений параметра W2 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_low/W3.png" alt="Распределение значений параметра W3 модели TS05"/>
+			<div class="info">Распределение значений параметра W3 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_low/W4.png" alt="Распределение значений параметра W4 модели TS05"/>
+			<div class="info">Распределение значений параметра W4 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_low/W5.png" alt="Распределение значений параметра W5 модели TS05"/>
+			<div class="info">Распределение значений параметра W5 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_low/W6.png" alt="Распределение значений параметра W6 модели TS05"/>
+			<div class="info">Распределение значений параметра W6 модели TS05</div>
+		</li>
+		</ul>
+		</div>
+		<h3 id="symh_high">Высокие значения индекса SYM-H</h3>
+		<div class="gallery clearfix">
+		<ul>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_high/bz_gsm.png" alt="Распределение значений Bz компоненты межпланетного поля"/>
+			<div class="info">Распределение значений Bz компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_high/sym_h.png" alt="Распределение значений индекса SYM-H"/>
+			<div class="info">Распределение значений индекса SYM-H</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_high/pressure.png" alt="Распределение значений давления плазмы"/>
+			<div class="info">Распределение значений давления плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_high/speed.png" alt="Распределение значений скорости солнечного ветра"/>
+			<div class="info">Распределение значений скорости солнечного ветра</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_high/by_gsm.png" alt="Распределение значений By компоненты межпланетного поля"/>
+			<div class="info">Распределение значений By компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_high/density.png" alt="Распределение значений плотности плазмы"/>
+			<div class="info">Распределение значений плотности плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_high/W1.png" alt="Распределение значений параметра W1 модели TS05"/>
+			<div class="info">Распределение значений параметра W1 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_high/W2.png" alt="Распределение значений параметра W2 модели TS05"/>
+			<div class="info">Распределение значений параметра W2 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_high/W3.png" alt="Распределение значений параметра W3 модели TS05"/>
+			<div class="info">Распределение значений параметра W3 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_high/W4.png" alt="Распределение значений параметра W4 модели TS05"/>
+			<div class="info">Распределение значений параметра W4 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_high/W5.png" alt="Распределение значений параметра W5 модели TS05"/>
+			<div class="info">Распределение значений параметра W5 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/symh_high/W6.png" alt="Распределение значений параметра W6 модели TS05"/>
+			<div class="info">Распределение значений параметра W6 модели TS05</div>
+		</li>
+		</ul>
+		</div>
+		<h3 id="bygsm_low">Низкие значения By-компоненты межпланетного магнитного поля</h3>
+		<div class="gallery clearfix">
+		<ul>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_low/bz_gsm.png" alt="Распределение значений Bz компоненты межпланетного поля"/>
+			<div class="info">Распределение значений Bz компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_low/sym_h.png" alt="Распределение значений индекса SYM-H"/>
+			<div class="info">Распределение значений индекса SYM-H</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_low/pressure.png" alt="Распределение значений давления плазмы"/>
+			<div class="info">Распределение значений давления плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_low/speed.png" alt="Распределение значений скорости солнечного ветра"/>
+			<div class="info">Распределение значений скорости солнечного ветра</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_low/by_gsm.png" alt="Распределение значений By компоненты межпланетного поля"/>
+			<div class="info">Распределение значений By компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_low/density.png" alt="Распределение значений плотности плазмы"/>
+			<div class="info">Распределение значений плотности плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_low/W1.png" alt="Распределение значений параметра W1 модели TS05"/>
+			<div class="info">Распределение значений параметра W1 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_low/W2.png" alt="Распределение значений параметра W2 модели TS05"/>
+			<div class="info">Распределение значений параметра W2 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_low/W3.png" alt="Распределение значений параметра W3 модели TS05"/>
+			<div class="info">Распределение значений параметра W3 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_low/W4.png" alt="Распределение значений параметра W4 модели TS05"/>
+			<div class="info">Распределение значений параметра W4 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_low/W5.png" alt="Распределение значений параметра W5 модели TS05"/>
+			<div class="info">Распределение значений параметра W5 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_low/W6.png" alt="Распределение значений параметра W6 модели TS05"/>
+			<div class="info">Распределение значений параметра W6 модели TS05</div>
+		</li>
+		</ul>
+		</div>
+		<h3 id="bygsm_high">Высокие значения By-компоненты межпланетного магнитного поля</h3>
+		<div class="gallery clearfix">
+		<ul>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_high/bz_gsm.png" alt="Распределение значений Bz компоненты межпланетного поля"/>
+			<div class="info">Распределение значений Bz компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_high/sym_h.png" alt="Распределение значений индекса SYM-H"/>
+			<div class="info">Распределение значений индекса SYM-H</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_high/pressure.png" alt="Распределение значений давления плазмы"/>
+			<div class="info">Распределение значений давления плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_high/speed.png" alt="Распределение значений скорости солнечного ветра"/>
+			<div class="info">Распределение значений скорости солнечного ветра</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_high/by_gsm.png" alt="Распределение значений By компоненты межпланетного поля"/>
+			<div class="info">Распределение значений By компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_high/density.png" alt="Распределение значений плотности плазмы"/>
+			<div class="info">Распределение значений плотности плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_high/W1.png" alt="Распределение значений параметра W1 модели TS05"/>
+			<div class="info">Распределение значений параметра W1 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_high/W2.png" alt="Распределение значений параметра W2 модели TS05"/>
+			<div class="info">Распределение значений параметра W2 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_high/W3.png" alt="Распределение значений параметра W3 модели TS05"/>
+			<div class="info">Распределение значений параметра W3 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_high/W4.png" alt="Распределение значений параметра W4 модели TS05"/>
+			<div class="info">Распределение значений параметра W4 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_high/W5.png" alt="Распределение значений параметра W5 модели TS05"/>
+			<div class="info">Распределение значений параметра W5 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bygsm_high/W6.png" alt="Распределение значений параметра W6 модели TS05"/>
+			<div class="info">Распределение значений параметра W6 модели TS05</div>
+		</li>
+		</ul>
+		</div>
+		<h3 id="bzgsm_low">Низкие значения Bz-компоненты межпланетного магнитного поля</h3>
+		<div class="gallery clearfix">
+		<ul>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_low/bz_gsm.png" alt="Распределение значений Bz компоненты межпланетного поля"/>
+			<div class="info">Распределение значений Bz компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_low/sym_h.png" alt="Распределение значений индекса SYM-H"/>
+			<div class="info">Распределение значений индекса SYM-H</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_low/pressure.png" alt="Распределение значений давления плазмы"/>
+			<div class="info">Распределение значений давления плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_low/speed.png" alt="Распределение значений скорости солнечного ветра"/>
+			<div class="info">Распределение значений скорости солнечного ветра</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_low/by_gsm.png" alt="Распределение значений By компоненты межпланетного поля"/>
+			<div class="info">Распределение значений By компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_low/density.png" alt="Распределение значений плотности плазмы"/>
+			<div class="info">Распределение значений плотности плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_low/W1.png" alt="Распределение значений параметра W1 модели TS05"/>
+			<div class="info">Распределение значений параметра W1 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_low/W2.png" alt="Распределение значений параметра W2 модели TS05"/>
+			<div class="info">Распределение значений параметра W2 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_low/W3.png" alt="Распределение значений параметра W3 модели TS05"/>
+			<div class="info">Распределение значений параметра W3 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_low/W4.png" alt="Распределение значений параметра W4 модели TS05"/>
+			<div class="info">Распределение значений параметра W4 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_low/W5.png" alt="Распределение значений параметра W5 модели TS05"/>
+			<div class="info">Распределение значений параметра W5 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_low/W6.png" alt="Распределение значений параметра W6 модели TS05"/>
+			<div class="info">Распределение значений параметра W6 модели TS05</div>
+		</li>
+		</ul>
+		</div>
+		<h3 id="bzgsm_high">Высокие значения Bz-компоненты межпланетного магнитного поля</h3>
+		<div class="gallery clearfix">
+		<ul>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_high/bz_gsm.png" alt="Распределение значений Bz компоненты межпланетного поля"/>
+			<div class="info">Распределение значений Bz компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_high/sym_h.png" alt="Распределение значений индекса SYM-H"/>
+			<div class="info">Распределение значений индекса SYM-H</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_high/pressure.png" alt="Распределение значений давления плазмы"/>
+			<div class="info">Распределение значений давления плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_high/speed.png" alt="Распределение значений скорости солнечного ветра"/>
+			<div class="info">Распределение значений скорости солнечного ветра</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_high/by_gsm.png" alt="Распределение значений By компоненты межпланетного поля"/>
+			<div class="info">Распределение значений By компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_high/density.png" alt="Распределение значений плотности плазмы"/>
+			<div class="info">Распределение значений плотности плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_high/W1.png" alt="Распределение значений параметра W1 модели TS05"/>
+			<div class="info">Распределение значений параметра W1 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_high/W2.png" alt="Распределение значений параметра W2 модели TS05"/>
+			<div class="info">Распределение значений параметра W2 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_high/W3.png" alt="Распределение значений параметра W3 модели TS05"/>
+			<div class="info">Распределение значений параметра W3 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_high/W4.png" alt="Распределение значений параметра W4 модели TS05"/>
+			<div class="info">Распределение значений параметра W4 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_high/W5.png" alt="Распределение значений параметра W5 модели TS05"/>
+			<div class="info">Распределение значений параметра W5 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/bzgsm_high/W6.png" alt="Распределение значений параметра W6 модели TS05"/>
+			<div class="info">Распределение значений параметра W6 модели TS05</div>
+		</li>
+		</ul>
+		</div>
+		<h3 id="speed_low">Низкие значения скорости солнечного ветра</h3>
+		<div class="gallery clearfix">
+		<ul>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_low/bz_gsm.png" alt="Распределение значений Bz компоненты межпланетного поля"/>
+			<div class="info">Распределение значений Bz компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_low/sym_h.png" alt="Распределение значений индекса SYM-H"/>
+			<div class="info">Распределение значений индекса SYM-H</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_low/pressure.png" alt="Распределение значений давления плазмы"/>
+			<div class="info">Распределение значений давления плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_low/speed.png" alt="Распределение значений скорости солнечного ветра"/>
+			<div class="info">Распределение значений скорости солнечного ветра</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_low/by_gsm.png" alt="Распределение значений By компоненты межпланетного поля"/>
+			<div class="info">Распределение значений By компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_low/density.png" alt="Распределение значений плотности плазмы"/>
+			<div class="info">Распределение значений плотности плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_low/W1.png" alt="Распределение значений параметра W1 модели TS05"/>
+			<div class="info">Распределение значений параметра W1 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_low/W2.png" alt="Распределение значений параметра W2 модели TS05"/>
+			<div class="info">Распределение значений параметра W2 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_low/W3.png" alt="Распределение значений параметра W3 модели TS05"/>
+			<div class="info">Распределение значений параметра W3 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_low/W4.png" alt="Распределение значений параметра W4 модели TS05"/>
+			<div class="info">Распределение значений параметра W4 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_low/W5.png" alt="Распределение значений параметра W5 модели TS05"/>
+			<div class="info">Распределение значений параметра W5 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_low/W6.png" alt="Распределение значений параметра W6 модели TS05"/>
+			<div class="info">Распределение значений параметра W6 модели TS05</div>
+		</li>
+		</ul>
+		</div>
+		<h3 id="speed_high">Высокие значения скорости солнечного ветра</h3>
+		<div class="gallery clearfix">
+		<ul>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_high/bz_gsm.png" alt="Распределение значений Bz компоненты межпланетного поля"/>
+			<div class="info">Распределение значений Bz компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_high/sym_h.png" alt="Распределение значений индекса SYM-H"/>
+			<div class="info">Распределение значений индекса SYM-H</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_high/pressure.png" alt="Распределение значений давления плазмы"/>
+			<div class="info">Распределение значений давления плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_high/speed.png" alt="Распределение значений скорости солнечного ветра"/>
+			<div class="info">Распределение значений скорости солнечного ветра</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_high/by_gsm.png" alt="Распределение значений By компоненты межпланетного поля"/>
+			<div class="info">Распределение значений By компоненты межпланетного поля</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_high/density.png" alt="Распределение значений плотности плазмы"/>
+			<div class="info">Распределение значений плотности плазмы</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_high/W1.png" alt="Распределение значений параметра W1 модели TS05"/>
+			<div class="info">Распределение значений параметра W1 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_high/W2.png" alt="Распределение значений параметра W2 модели TS05"/>
+			<div class="info">Распределение значений параметра W2 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_high/W3.png" alt="Распределение значений параметра W3 модели TS05"/>
+			<div class="info">Распределение значений параметра W3 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_high/W4.png" alt="Распределение значений параметра W4 модели TS05"/>
+			<div class="info">Распределение значений параметра W4 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_high/W5.png" alt="Распределение значений параметра W5 модели TS05"/>
+			<div class="info">Распределение значений параметра W5 модели TS05</div>
+		</li>
+		<li>
+			<img height="600" width="800" src="https://github.com/JLarky/solar-wind-extremes/raw/master/out/speed_high/W6.png" alt="Распределение значений параметра W6 модели TS05"/>
+			<div class="info">Распределение значений параметра W6 модели TS05</div>
+		</li>
+		</ul>
+		</div>
+		</div>
 	</section>
 	</div>
 	<footer>
