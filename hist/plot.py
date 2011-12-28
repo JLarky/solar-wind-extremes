@@ -48,7 +48,8 @@ def plotone(row, file, title, fraction):
 		plt.plot(*zip(*a))
 		plt.xlabel("extreme values (%.1f%%): %.2f, %.2f" % (100.0/fraction, row[d], row[size-d]) )
 	else:
-		plt.xlabel('value')
+		avg = np.average(row)
+		plt.xlabel('average value = %.2f' % avg)
 
 	dir = os.path.dirname("../out/"+file+".png")
 	if not os.path.exists(dir):

@@ -5,7 +5,7 @@ real*8 :: avg(6)
 
 print *, 'start'
 
-open(unit=1, file='../data2/omni_1h.dat', form='formatted', access='sequential')
+open(unit=1, file='../data2/omni_ts05_5m.dat', form='formatted', access='sequential')
 open(unit=2, file='data_pdyn_low.dat')
 open(unit=3, file='data_pdyn_hight.dat')
 open(unit=4, file='data_symh_low.dat')
@@ -51,6 +51,20 @@ BZGSM_min = -16.78
 BZGSM_max = 16.99
 Speed_min = 258.45
 Speed_max = 811.27
+
+
+! 5min 0.1%
+
+Pdyn_min = 0.12
+Pdyn_max = 19.78
+SYMH_min = -171.40
+SYMH_max = 38.80
+BYGSM_min = -17.43
+BYGSM_max = 19.86
+BZGSM_min = -17.91
+BZGSM_max = 17.87
+Speed_min = 258.35
+Speed_max = 815.91
 
 
 if (Pdyn.le.Pdyn_min) then

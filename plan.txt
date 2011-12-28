@@ -1,5 +1,6 @@
 data --- not used anymore
 data2
-hist/plot.py
+hist/plot.py --- plot to get idea about extremes
 find_extreme
+hist/plot.py --- replot at extemes
 plot/runall.py
