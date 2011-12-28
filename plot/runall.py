@@ -4,15 +4,15 @@ import subprocess
 
 
 files = ["pdyn_low",
-	 "pdyn_hight",
+	 "pdyn_high",
 	 "symh_low",
-	 "symh_hight",
+	 "symh_high",
 	 "bygsm_low",
-	 "bygsm_hight",
+	 "bygsm_high",
 	 "bzgsm_low",
-	 "bzgsm_hight",
+	 "bzgsm_high",
 	 "speed_low",
-	 "speed_hight"]
+	 "speed_high"]
 
 
 for i in files:
@@ -37,6 +37,8 @@ for i in files:
 	command = ('make')
 	subprocess.check_call(command)
 	command = ('make', 'show')
+	subprocess.check_call(command)
+	command = ('mkdir', '-p', i+"/")
 	subprocess.check_call(command)
 	command = ('cp', 'lines.png', 'inputfile.dat', 'points.dat', i+"/")
 	subprocess.check_call(command)

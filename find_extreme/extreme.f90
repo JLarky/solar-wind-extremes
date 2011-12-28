@@ -7,15 +7,15 @@ print *, 'start'
 
 open(unit=1, file='../data2/omni_ts05_5m.dat', form='formatted', access='sequential')
 open(unit=2, file='data_pdyn_low.dat')
-open(unit=3, file='data_pdyn_hight.dat')
+open(unit=3, file='data_pdyn_high.dat')
 open(unit=4, file='data_symh_low.dat')
-open(unit=5, file='data_symh_hight.dat')
+open(unit=5, file='data_symh_high.dat')
 open(unit=6, file='data_bygsm_low.dat')
-open(unit=7, file='data_bygsm_hight.dat')
+open(unit=7, file='data_bygsm_high.dat')
 open(unit=8, file='data_bzgsm_low.dat')
-open(unit=9, file='data_bzgsm_hight.dat')
+open(unit=9, file='data_bzgsm_high.dat')
 open(unit=10, file='data_speed_low.dat')
-open(unit=11, file='data_speed_hight.dat')
+open(unit=11, file='data_speed_high.dat')
 
  count = 0
  ih_old = 0.0
