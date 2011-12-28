@@ -7,6 +7,7 @@ real*8 :: avg(12)
 print *, 'start'
 
 open(unit=1, file='omni_ts05.dat', form='formatted', access='sequential')
+open(unit=2, file='omni_ts05_5m.dat')
 open(unit=3, file='omni_1h.dat')
 
 
@@ -49,6 +50,7 @@ else
 	avg = avg/num
 	write (3,*) ih, num, avg
     end if
+    write (2, *) ih, num, Pdyn, Speed, DEN, BZGSM, BYGSM, SYMH, W1, W2, W3, W4, W5, W6
 
     ! reset
     ih_old = ih
