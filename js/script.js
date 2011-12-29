@@ -32,6 +32,6 @@ jQuery(document).ready(function($) {
 		return false;
 	}).first().click()
 
+	$("table").tablesorter()
 });
-
 
