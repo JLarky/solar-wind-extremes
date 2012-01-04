@@ -1,5 +1,5 @@
 /* Author: JLarky <jlarky@gmail.com>
-v 3
+v 4
 
 */
 
@@ -13,8 +13,9 @@ jQuery(document).ready(function($) {
 			$this.find("li").addClass('small').find("img")
 			.each(function() {
 				var $this = $(this);
+				$this.parent().prepend($this.clone().addClass('only-print'));
 				var src = $this.attr('src').replace(".png", "-thumb.png");
-				$this.attr('src', src)
+				$this.attr('src', src).addClass('no-print')
 				console.log(src)
 			})
 			.click(function() {

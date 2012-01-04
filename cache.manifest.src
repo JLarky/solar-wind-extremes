@@ -11,7 +11,7 @@ CACHE:
 #js
 js/jquery.tablesorter.min.js
 js/plugins.js
-js/script.js?3
+js/script.js?4
 js/libs/jquery-1.7.1.min.js
 js/libs/modernizr-2.0.6.min.js
 

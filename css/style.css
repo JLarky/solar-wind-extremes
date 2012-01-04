@@ -357,8 +357,12 @@ html {
   .gallery .panel {
     display: none;
   }
+  .gallery li.small {
+    width: 49%;
+    height: 350px;
+  }
   .gallery li.small img {
-    width: 50%;
+    width: 99%;
   }
   .gallery li.small .info {
     display: block;
@@ -377,7 +381,7 @@ html {
     display: none;
   }
   .only-print {
-    display: block;
+    display: initial;
   }
 }
 
