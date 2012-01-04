@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Thu Jan 5 00:51:40 MSK 2012 e467120 comments & authors
+# Thu Jan 5 01:35:34 MSK 2012 ae5768f more print friendly version
 
 # inspired by http://www.html5rocks.com/en/tutorials/appcache/beginner/
 
@@ -11,7 +11,7 @@ CACHE:
 #js
 js/jquery.tablesorter.min.js
 js/plugins.js
-js/script.js?3
+js/script.js?4
 js/libs/jquery-1.7.1.min.js
 js/libs/modernizr-2.0.6.min.js
 
