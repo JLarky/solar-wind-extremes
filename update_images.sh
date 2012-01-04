@@ -1,12 +1,8 @@
 #!/bin/bash
 
-echo 123
-
 # get list of images to download
 IMAGES=`grep -o '\<img\(.*\)' index.html | grep -o 'src\([^\ ]*\)' | grep -o '\./images\([^\"]*\)'`
 
-
-mkdir -p
 for img in $IMAGES
 do
 	# make list of url from that
@@ -17,6 +13,8 @@ do
 	if true
 	then
 		mkdir -p `dirname $img`
-		wget -c $url -O $img
+		wget -q -c $url -O $img
+		thmb_img=`echo $img | sed 's/\.png$/-thumb\.png/'`
+		convert -resize 130 $img $thmb_img
 	fi
 done

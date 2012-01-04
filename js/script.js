@@ -9,13 +9,20 @@ jQuery(document).ready(function($) {
 		if (!$this.hasClass('working')) {
 			$this.addClass('working');
 			$this.prepend('<div class="panel"><img /><div class="info"></div></div>');
-			$this.find("li").addClass('small').find("img").click(function() {
+			$this.find("li").addClass('small').find("img")
+			.each(function() {
+				var $this = $(this);
+				var src = $this.attr('src').replace(".png", "-thumb.png");
+				$this.attr('src', src)
+				console.log(src)
+			})
+			.click(function() {
 				var $this = $(this);
 				var $li = $this.parents("li");
 				var $panel = $this.parents(".gallery").find(".panel");
 
 				$panel.find(".info").html($li.find(".info").html())
-				$panel.find("img").attr('src', $li.find("img").attr('src'));
+				$panel.find("img").attr('src', $li.find("img").attr('src').replace("-thumb.png", ".png"));
 			});
 
 			$this.find("li:first img").click();
