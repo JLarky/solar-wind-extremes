@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Thu Jan 5 00:30:49 MSK 2012 7c64d9b cache.manifest
+# Thu Jan 5 00:40:10 MSK 2012 6de61bd cache update
 
 CACHE:
 
@@ -9,7 +9,7 @@ CACHE:
 #js
 js/jquery.tablesorter.min.js
 js/plugins.js
-js/script.js
+js/script.js?3
 js/libs/jquery-1.7.1.min.js
 js/libs/modernizr-2.0.6.min.js
 

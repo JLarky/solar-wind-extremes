@@ -1,6 +1,8 @@
 CACHE MANIFEST
 # Wed Jan 4 23:37:49 MSK 2012 11829c6 thumbnails now stored in separeate files
 
+# inspired by http://www.html5rocks.com/en/tutorials/appcache/beginner/
+
 CACHE:
 
 ./
@@ -9,7 +11,7 @@ CACHE:
 #js
 js/jquery.tablesorter.min.js
 js/plugins.js
-js/script.js
+js/script.js?3
 js/libs/jquery-1.7.1.min.js
 js/libs/modernizr-2.0.6.min.js
 
