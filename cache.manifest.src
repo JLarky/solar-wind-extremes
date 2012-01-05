@@ -16,7 +16,7 @@ js/libs/jquery-1.7.1.min.js
 js/libs/modernizr-2.0.6.min.js
 
 #css
-css/style.css
+css/style.css?1
 
 #webfonts
 webfonts/League_Gothic-webfont.woff
