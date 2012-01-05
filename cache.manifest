@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Thu Jan 5 02:42:42 MSK 2012 cd641e4 bump cache.manifest version
+# Thu Jan 5 04:50:24 MSK 2012 56c2cb3 validation & other cleaning
 
 # inspired by http://www.html5rocks.com/en/tutorials/appcache/beginner/
 
@@ -11,7 +11,7 @@ CACHE:
 #js
 js/jquery.tablesorter.min.js
 js/plugins.js
-js/script.js?4
+js/script.js?5
 js/libs/jquery-1.7.1.min.js
 js/libs/modernizr-2.0.6.min.js
 

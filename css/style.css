@@ -353,6 +353,10 @@ html {
   padding-right: 4px;
 }
 
+.gallery li.selected {
+  opacity: 0.75;
+}
+
 @media print {
   .gallery .panel {
     display: none;
@@ -446,6 +450,7 @@ table.tablesorter tbody td {
 	padding: 4px;
 	background-color: #FFF;
 	vertical-align: top;
+	cursor: pointer;
 }
 table.tablesorter tbody tr.odd td {
 	background-color:#F0F0F6;
@@ -458,6 +463,10 @@ table.tablesorter thead tr .headerSortDown {
 }
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
 background-color: #8dbdd8;
+}
+
+table.tablesorter .selected td {
+  background: #B8AD93;
 }
 
 /* footer */
