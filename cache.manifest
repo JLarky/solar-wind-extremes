@@ -1,17 +1,16 @@
 CACHE MANIFEST
-# Thu Jan 5 05:00:29 MSK 2012 640f04f new css
+# Thu Jan 5 20:35:54 MSK 2012 9bf2694 bump cache.manifest version
 
 # inspired by http://www.html5rocks.com/en/tutorials/appcache/beginner/
 
 CACHE:
 
 ./
-./index.html
 
 #js
 js/jquery.tablesorter.min.js
 js/plugins.js
-js/script.js?5
+js/script.js?7
 js/libs/jquery-1.7.1.min.js
 js/libs/modernizr-2.0.6.min.js
 

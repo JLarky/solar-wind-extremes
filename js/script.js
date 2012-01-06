@@ -1,7 +1,25 @@
 /* Author: JLarky <jlarky@gmail.com>
-v 5
+v 7
 
 */
+
+// Check if a new cache is available on page load.
+window.addEventListener('load', function(e) {
+
+  window.applicationCache.addEventListener('updateready', function(e) {
+    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+      // Browser downloaded a new app cache.
+      // Swap it in and reload the page to get the new hotness.
+      window.applicationCache.swapCache();
+      if (confirm('A new version of this site is available. Load it?')) {
+        window.location.reload();
+      }
+    } else {
+      // Manifest didn't changed. Nothing new to server.
+    }
+  }, false);
+
+}, false);
 
 jQuery(document).ready(function($) {
 	$(".gallery").each(function() {
@@ -60,12 +78,11 @@ jQuery(document).ready(function($) {
 			$tr.parent().find("tr").removeClass('selected');
 			$tr.addClass('selected');
 		});
-		$tr.click(function(e) {if (e.originalEvent) {$img.click()};})
-		$img.click(function(e) {if (e.originalEvent) {$tr.click()};})
-		console.log($img, $tr);
+		$tr.click(function(e, s) {if (e.originalEvent || s) {$img.click()};})
+		$img.click(function(e, s) {if (e.originalEvent || s) {$tr.click()};})
 	})
 
 });
 function select(src) {
-	$(src).click()
+	$(src).trigger("click", ["select"])
 }
