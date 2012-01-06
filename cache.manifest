@@ -1,11 +1,9 @@
 CACHE MANIFEST
-# Fri Jan 6 17:47:00 MSK 2012 bf26ca5 text rearrangement
+# Fri Jan 6 17:48:42 MSK 2012 2712f61 bump cache.manifest version
 
 # inspired by http://www.html5rocks.com/en/tutorials/appcache/beginner/
 
 CACHE:
-
-./
 
 #js
 js/jquery.tablesorter.min.js
