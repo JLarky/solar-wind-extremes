@@ -16,7 +16,7 @@ js/libs/modernizr-2.0.6.min.js
 css/style.css?1
 
 #webfonts
-webfonts/League_Gothic-webfont.woff
+#webfonts/League_Gothic-webfont.woff
 webfonts/League_Gothic-webfont.svg
 webfonts/League_Gothic-webfont.ttf
 webfonts/League_Gothic-webfont.eot
