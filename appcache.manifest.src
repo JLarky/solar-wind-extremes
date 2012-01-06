@@ -5,6 +5,8 @@ CACHE MANIFEST
 
 CACHE:
 
+./
+
 #js
 js/jquery.tablesorter.min.js
 js/plugins.js

@@ -1,9 +1,11 @@
 CACHE MANIFEST
-# Fri Jan 6 18:59:28 MSK 2012 0264ff1 bump version
+# Fri Jan 6 19:00:29 MSK 2012 5a45c4d bump version
 
 # inspired by http://www.html5rocks.com/en/tutorials/appcache/beginner/
 
 CACHE:
+
+./
 
 #js
 js/jquery.tablesorter.min.js
