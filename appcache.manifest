@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Fri Jan 6 18:00:30 MSK 2012 5bf00be bump cache.manifest version
+# Fri Jan 6 18:53:59 MSK 2012 8fe1593 update html
 
 # inspired by http://www.html5rocks.com/en/tutorials/appcache/beginner/
 
@@ -16,7 +16,7 @@ js/libs/modernizr-2.0.6.min.js
 css/style.css?1
 
 #webfonts
-#webfonts/League_Gothic-webfont.woff
+webfonts/League_Gothic-webfont.woff
 webfonts/League_Gothic-webfont.svg
 webfonts/League_Gothic-webfont.ttf
 webfonts/League_Gothic-webfont.eot
